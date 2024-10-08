@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block css %}
+  
+{% endblock %}
+
+{% block main %}
+<div class="container py-5">
+    <h1>Internal Server Error</h1>
+    <p>The card we tried did not work. Please provide another form of payment and try again, you have not been charged. Thank you and have a great day.</p>
+    
+    <p class="py-3">Please contact <a class="text-decoration-none" href="mailto:admin@greenvilleutd.com">admin@greenvilleutd.com</a> if you need further assistance. Thank you for your time.</p>
+
+    <p>{{ errorCode }}</p>
+    <p>{{ errorMessage }}</p>
+</div>
+{% endblock %}
+
+{% block js %}
+  
+{% endblock %}
