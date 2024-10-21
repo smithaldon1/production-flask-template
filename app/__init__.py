@@ -2,8 +2,11 @@ import os
 import logging
 from flask import Flask, render_template
 from flask.logging import default_handler
+from flask_sqlalchemy import SQLAlchemy
 from logging.handlers import RotatingFileHandler
 from jinja2 import ChoiceLoader, FileSystemLoader
+
+db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
@@ -41,7 +44,7 @@ def register_blueprints(app):
 
 
 def initialize_extensions(app):
-    pass
+    db.init_app(app)
 
 def register_error_handlers(app):
     pass
